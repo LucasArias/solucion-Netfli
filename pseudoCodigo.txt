@@ -1,0 +1,22 @@
+class ListaDeReproduccionUsuario {
+
+private List<String> listaDePeliculas
+private List<ReproduccionPelicula> listaDeReproduccionesPeliculas
+
+public void agregarPelicula(String unNombre){
+listaDePeliculas.add(unNombre);
+listaDeReproducciones.add(new ReproduccionPelicula(unNombre));
+}
+
+public void reproducirPelicula(String unNombre){
+ReproduccionPelicula unaPelicula = listaDeReproduccionesPeliculas.encontrarPelicula(unNombre);
+Boolean reproduccion = Reproductor.play(unaPelicula.idVideo(), unaPelicula.minutoInicio());
+}
+
+public void pausarPelicula(String unNombre){
+ReproduccionPelicula unaPelicula = listaDeReproduccionesPeliculas.encontrarPelicula(unNombre);
+Reproductor.stop(unaPelicula.idVideo());
+unaPelicula.minutoReproduccion = unaPelicula.minutoActual
+}
+
+}
